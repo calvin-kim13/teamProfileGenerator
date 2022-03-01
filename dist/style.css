@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header {
@@ -11,12 +12,21 @@ header {
     height: 10rem;
     background-color: black;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 4rem;
 }
 
 .team-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-weight: bold;
 }

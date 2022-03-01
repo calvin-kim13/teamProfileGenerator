@@ -7,6 +7,9 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+// Declare variables
+const teamArr = [];
+
 // Manager Questions
 async function managerQuestions() {
     try {
@@ -66,6 +69,7 @@ async function managerQuestions() {
             }
         ])
         const managerData = new Manager (name, id, email, officeNumber);
+        teamArr.push(managerData);
         return crossroads();
     } catch (err) {
         console.error(err)
@@ -158,6 +162,7 @@ async function engineerQuestions () {
             }
         ])
         const engineerData = new Engineer (name, id, email, github);
+        teamArr.push(engineerData);
         return crossroads();
     } catch (err) {
         console.error(err)
@@ -222,6 +227,7 @@ async function internQuestions() {
             }
         ])
         const internData = new Intern (name, id, email, school);
+        teamArr.push(internData);
         return crossroads();
     } catch (err) {
         console.error(err)
@@ -231,7 +237,7 @@ async function internQuestions() {
 // Build team function
 async function buildTeam() {
     try {
-        fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), generateHtml, 'UTF8')
+        fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), generateHtml(teamArr), 'UTF8')
         console.log("Successfully built your team!");
     } catch (err) {
         console.error(err)
