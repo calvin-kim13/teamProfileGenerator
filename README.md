@@ -35,8 +35,12 @@ Once the application is installed and the user runs `node index.js`, the command
 
 ### Screen shot of an example:
 ![Alt text](/dist/myTeam.png?raw=true "Optional Title")
-    
 
+## LIVE
+| DEPLOYMENT | URL | STATUS |
+| ---------- | --- | ------ |
+| Repository  | [GitHub Repo](https://github.com/calvin-kim13/teamProfileGenerator ) |  ACTIVE 🟢   |
+    
 ## Credits
 
 - Dane Shresbury (UCI Coding Bootcamp Tutor).
